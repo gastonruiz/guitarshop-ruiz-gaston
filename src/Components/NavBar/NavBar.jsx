@@ -18,7 +18,8 @@ export default function NavBar() {
       <div>
         <ul className="flex items-stretch font-mono text-xl font-semibold text-[rgb(255,0,255)] flex space-x-12">
           {NavBarItems.map((item) => (
-            <a href="x" className="pt-24 pl-3 ml-4">
+
+            <a href={ '/' + item.toLocaleLowerCase() } className="pt-24 pl-3 ml-4">
               {item}
             </a>
           ))}

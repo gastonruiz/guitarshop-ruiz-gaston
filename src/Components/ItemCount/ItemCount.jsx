@@ -1,0 +1,48 @@
+import {React, useState}  from 'react'
+import buyNow from '../../imagenes/buyNow.jpg'
+
+
+
+
+
+const ItemCount = ({stock, initial = 0, onAdd}) => {
+  
+    const [cuenta, setCuenta] = useState(initial)
+
+    const sumar = ()=>{
+        cuenta < stock && setCuenta(cuenta + 1)
+        cuenta >= stock && alert('Lamentamos no tener esa cantidad disponible')
+    }
+    const restar =()=>{
+        cuenta > 0 && setCuenta(cuenta - 1)
+    }
+  
+    return (
+    
+    <>
+    <div className='grid grid-cols-3 text-center'>
+        <div className='col-start-2 col-end-3'>
+    <div className='grid grid-cols-3 gap-5 py-7 px-14 bg-zinc-900'>
+        <button className='text-2xl text-gray-200'onClick={restar}>-</button>
+        <p className='text-3xl text-gray-200'>{cuenta}</p>
+        <button className='text-2xl text-gray-200' onClick={sumar}>+</button>
+    </div>
+        </div>
+    </div>
+
+    <div className='text-center'>
+    <button className='p-2 ml-6 mr-6 mt-0 pt-1'
+        onClick={onAdd}
+    >
+        <img className='rounded-xl' src={buyNow} alt='Buy Now' width={150}
+        
+
+        ></img>
+        
+    </button>
+    </div>
+    </>
+  )
+}
+
+export default ItemCount
