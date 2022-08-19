@@ -3,7 +3,7 @@ import ItemListContainer from "./Components/ItemListContainer/ItemListContainer"
 
 function App() {
   return (
-    <div>
+    <div className="">
       <NavBar />
       <ItemListContainer msg="Aca va el Catálogo" />
 

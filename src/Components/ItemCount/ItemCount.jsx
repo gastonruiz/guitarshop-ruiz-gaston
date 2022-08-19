@@ -20,9 +20,9 @@ const ItemCount = ({stock, initial = 0, onAdd}) => {
     return (
     
     <>
-    <div className='grid grid-cols-3 text-center'>
-        <div className='col-start-2 col-end-3'>
-    <div className='grid grid-cols-3 gap-5 py-7 px-14 bg-zinc-900'>
+    <div className=''>
+        <div className='text-center'>
+    <div className='grid grid-cols-3 gap-6 py-7 px-14'>
         <button className='text-2xl text-gray-200'onClick={restar}>-</button>
         <p className='text-3xl text-gray-200'>{cuenta}</p>
         <button className='text-2xl text-gray-200' onClick={sumar}>+</button>

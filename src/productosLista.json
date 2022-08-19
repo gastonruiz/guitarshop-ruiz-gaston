@@ -1,0 +1,37 @@
+{"productosLista":[
+    {
+        "id":"1",
+        "title": "Jackson Arrow",
+        "price":" 300" ,
+        "stock": "4", 
+        "initial": "1",
+        "img":"https://img.kytary.com/eshop_ie/velky_v2/na/637806076438200000/9b531421/64961487/esp-ltd-arrow-200-military-green-satin.jpg"
+    },
+    {
+        "id":"2",
+        "title": "Fender Stratocaster",
+        "price":" 600" ,
+        "stock": "6", 
+        "initial": "1",
+        "img":"https://www.fmicassets.com/Damroot/ZoomJpg/10002/0140192305_gtr_frt_001_rr.jpg"
+    },
+    {
+        "id":"3",
+        "title": "ESP LTD",
+        "price":" 700" ,
+        "stock": "8", 
+        "initial": "1",
+        "img":"https://cdn.shopify.com/s/files/1/0052/0326/3577/products/xlarge_e3d831a5-f536-4c33-8cdd-6b831e655c65_1600x.png?v=1545090501"
+
+    } ,
+    {
+        "id":"4",
+        "title": "Takamine Hirade & classical",
+        "price":" 900" ,
+        "stock": "3", 
+        "initial": "1",
+        "img":"https://http2.mlstatic.com/D_NQ_NP_600097-MLA44198200586_112020-O.jpg"
+
+    }
+   
+]}
