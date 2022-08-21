@@ -16,6 +16,7 @@ const ItemCount = ({stock, initial = 0, onAdd}) => {
     const restar =()=>{
         cuenta > 0 && setCuenta(cuenta - 1)
     }
+   
   
     return (
     
@@ -32,7 +33,7 @@ const ItemCount = ({stock, initial = 0, onAdd}) => {
 
     <div className='text-center'>
     <button className='p-2 ml-6 mr-6 mt-0 pt-1'
-        onClick={onAdd}
+        onClick={() => onAdd(cuenta)} 
     >
         <img className='rounded-xl' src={buyNow} alt='Buy Now' width={150}
         
