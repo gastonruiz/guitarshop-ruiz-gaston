@@ -6,7 +6,7 @@ export default function NavBar() {
   const NavBarItems = ["Home", "Categories", "About Us", "Contact Us"];
 
   return (
-    <div className="inline-grid grid-cols-4 bg-black">
+    <div className="inline-grid grid-cols-4 bg-black m-0">
       <div>
         <img src={logo} alt="logo" width={250} height={250} />
       </div>
@@ -18,7 +18,7 @@ export default function NavBar() {
       <div>
         <ul className="flex items-stretch font-mono text-xl font-semibold text-[rgb(255,0,255)] flex space-x-12">
           {NavBarItems.map((item) => (
-
+              
             <a href={ '/' + item.toLocaleLowerCase() } className="pt-24 pl-3 ml-4">
               {item}
             </a>

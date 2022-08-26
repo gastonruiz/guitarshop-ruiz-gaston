@@ -26,13 +26,15 @@ const ItemList = (props) => {
   return (
     <>
       {productos.length < 1 ? (
-        <div>
+        <div className="grid justify-items-center">
          
   <img className="" src={carga} alt='loading'
   >
   </img>
-  Processing...
-
+  <p className=" bg-black text-white ">
+  Loading Products... 
+  </p>
+  
         </div>
       ) : (
         productos.map((item, index) => (
