@@ -1,18 +1,39 @@
 import React from "react";
 import ItemDetail from "./ItemDetail/ItemDetail";
-import { useEffect } from "react";
-import axios from "axios";
-import datosLista from "../../productosLista.json";
+import DetalleProd from "../../productosLista.json"
 
-const ItemDetailContainer = (productosLista) => {
-  return <>
-   <div>ItemDetailContainer</div>
-  <ItemDetail/>
- </>
 
-};
 
-export default ItemDetailContainer;
+const ItemDetailContainer = () => {
+  return (
+    <div>ItemDetailContainer
+      {
+      DetalleProd && DetalleProd.map( DetalleProd => {
+        return( 
+          <div key={DetalleProd.id}>
+           <div> 
+             { DetalleProd.title}
+             { DetalleProd.img}
+             { DetalleProd.descripcion}
+            </div>
+          </div>
+        )
+      })
+    }
+      <ItemDetail/>
+    </div>
+  )
+}
+
+
+export default ItemDetailContainer
+
+
+
+
+
+
+
 
 /* const ItemDetailContainer = () => {
   const{id} = useParams()
