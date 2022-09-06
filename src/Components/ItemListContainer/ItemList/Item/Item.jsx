@@ -1,9 +1,9 @@
 import React from "react";
 import ItemCount from "../../../ItemCount/ItemCount";
-import { link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Detalle from "../../../../imagenes/btnMoreInfo.jpg"
 
-const Item = ({  title, price, stock, img}) => {
+const Item = ({ id, title, price, stock, img}) => {
   const onAdd = (cuenta) => {
     
     alert(`Gracias por comprar ${cuenta} articulos`);
@@ -15,7 +15,9 @@ const Item = ({  title, price, stock, img}) => {
 
   return (
     <div className="inline-grid max-w-sm rounded overflow-hidden m-7 shadow-lg">
+  <Link to= {`/item/${id}`}>
   <img className="w-full" src={img} alt="The Guitar"width={600} height={800}/>
+  </Link>
   <div className="px-6 py-4">
     <div className="font-bold text-xl mb-2">{title} <span>$ {price}</span></div>
     <p className="text-gray-700 text-base">
