@@ -1,37 +1,42 @@
 import React from "react";
 import ItemDetail from "./ItemDetail/ItemDetail";
-import DetalleProd from "../../productosLista.json"
+import DataLista from "../../productosLista.json"
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
-
+import { useEffect, useState } from "react";
+import carga from "../../imagenes/rockout-guitar.gif" 
 
 
 const ItemDetailContainer = () => {
 
-const {id} = useParams();
-const [Item, setItem] = useState([])
+const {id} = useParams(); //traigo id desde url con hook useParams
+
+const { productosLista } = DataLista  //buscar los productos
+
+const [Item, setItem] = useState([null]) //estado
 
 useEffect(()=>{
-  const Item = [{ id, title, price, stock, img}]
-  
-new Promise(()=>{
+  const prom = new Promise((res, rej) => {
 //Simulamos retraso de red como pasaria con firebase
     setTimeout(()=>{
-        resolve(Item.find((element)=> element.id));
+      const producto = productosLista.find( ele => ele.id === id )
+
+        res(producto)
     }, 2000)
 
-}).then((data)=>{
-//Recibimos la promesa
-    setItem(data)
 })
 
-},[id])
+prom
+  .then((resultado) => setItem(resultado))
+  .catch((err) => console.log(err))
+  .finally(() => console.log("promesa realizada"));
+},[id]);
 
-
-
+ 
   return (
-    <div>
-      <ItemDetail item={item}/>
+
+    
+    <div>  
+      <ItemDetail Item = { Item }/>
     </div>
   )
   
@@ -39,42 +44,3 @@ new Promise(()=>{
 
 
 export default ItemDetailContainer
-
-
-
-
-
-
-
-
-/* const ItemDetailContainer = () => {
-  const{id} = useParams()
-  cont [item, setItem] = useState({});
-  
-  
-
-  useEffect( async () => {
-    const detalleProd = async () =>{
-    try {
-      const description = await axios.get(datosLista)
-      console.log(descripcion.datosLista)
-      console.log(id.datosLista)
-    } catch (error) {
-      console.log(error)
-      
-    }
-  }
-    detalleProd()
-
-    return ()=>
-      setDet ([])
-  }, [])
-  
-  return (
-    <div>
-      { Object.keys(item).length && <ItemDetail item={item}/>}
-    </div>
-  )
-}
-
-export default ItemDetailContainer */
