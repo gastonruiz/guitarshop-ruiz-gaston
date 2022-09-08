@@ -3,7 +3,7 @@ import logo from "../../imagenes/logoPagina.webp";
 import CartWidget from "./CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
-import { Route } from "react-router-dom";
+
 
 export default function NavBar() {
   const NavBarItems = ["Home", "Category", "About Us", "Contact Us"];
@@ -21,13 +21,28 @@ export default function NavBar() {
         </h1>
       </div>
       <div>
-        <ul className="flex items-stretch font-mono text-xl font-semibold text-[rgb(255,0,255)] flex space-x-12">
-          {NavBarItems.map((item) => (
-              
-            <a href= { '/' + item.toLocaleLowerCase() } className="pt-24 pl-3 ml-4">
-              {item}
-            </a>
-          ))}
+      <ul className="flex items-stretch font-mono text-xl font-semibold text-[rgb(255,0,255)] flex space-x-12">
+            <Link to={'/'}>
+                <span className="pt-24 pl-3 ml-4">
+                    Home
+                </span>
+            </Link>
+            <Link to={'/categoryid'}>
+                <span className="pt-24 pl-3 ml-4">
+                    Category
+                </span>
+            </Link>
+            <Link to="/">
+                <span className="pt-24 pl-3 ml-4">
+                    About Us
+                </span>
+            </Link>
+            <Link to="/">
+                <span className="pt-24 pl-3 ml-4">
+                    Contact Us
+                </span>
+            </Link>
+
         </ul>
       </div>
       <div className="pt-16 ml-24 pl-24 ">
