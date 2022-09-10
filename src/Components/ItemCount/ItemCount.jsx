@@ -1,5 +1,5 @@
 import {React, useState}  from 'react'
-import buyNow from '../../imagenes/buyNow.jpg'
+import addCart from '../../imagenes/addToCart.jpg'
 
 
 
@@ -35,7 +35,7 @@ const ItemCount = ({stock, initial = 0, onAdd}) => {
     <button className='p-2 ml-6 mr-6 mt-0 pt-1'
         onClick={() => onAdd(cuenta)} 
     >
-        <img className='rounded-xl' src={buyNow} alt='Buy Now' width={150}
+        <img className='rounded-xl' src={addCart} alt='Add Cart' width={150}
         
 
         ></img>

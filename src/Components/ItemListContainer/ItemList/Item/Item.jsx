@@ -6,7 +6,7 @@ import Detalle from "../../../../imagenes/btnMoreInfo.jpg"
 const Item = ({ id, title, price, stock, img}) => {
   const onAdd = (cuenta) => {
     
-    alert(`Gracias por comprar ${cuenta} articulos`);
+    alert(`Agregaste ${cuenta} articulos al carrito`);
 
     
   
@@ -26,8 +26,11 @@ const Item = ({ id, title, price, stock, img}) => {
     </p>
     <div className="bg-gray-700 rounded">
         <ItemCount initial={0} stock={stock} onAdd={onAdd} />
+
+      <Link to={`/item/${id}`}>
         <button className="ml-14" to={`/item/${title, price, stock, img}`}> 
       <img src={Detalle} alt="More Detail" /> </button>
+      </Link>  
       </div>
      
   </div>

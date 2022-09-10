@@ -21,20 +21,26 @@ export default function NavBar() {
         </h1>
       </div>
       <div>
-      <ul className="flex items-stretch font-mono text-2xl font-semibold text-[rgb(255,0,255)] flex space-x-12 pt-28">
+      <ul className="flex items-stretch font-mono font-semibold text-[rgb(255,0,255)] flex space-x-4 text-xl pt-24">
             <Link to={'/'}>
-                <span className="ml-20 hover:text-pink-600">
+                <span className="ml-4 hover:text-pink-600">
                     Home
                 </span>
             </Link>
             <Link to={'/categoryid'}>
-                <span className="ml-6 hover:text-pink-600">
-                    Category
+                <span className="ml-4 hover:text-pink-600" >
+                Electric
+              
+                </span>
+            </Link>
+            <Link to={'/categoryid'}>
+                <span className="ml-4 hover:text-pink-600" >
+                Acoustic
                 </span>
             </Link>
             
             <Link to="/">
-                <span className="ml-6 hover:text-pink-600">
+                <span className="ml-4 hover:text-pink-600">
                     Contact
                 </span>
             </Link>
